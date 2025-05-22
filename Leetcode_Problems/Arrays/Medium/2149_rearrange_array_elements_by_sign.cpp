@@ -54,5 +54,20 @@ class Solution {
             return resultArray;
 
             // Time Complexity - O(n) Space Complexity O(n);
+
+            // Optimal + Cleaner Version
+            int positiveElement = 0;
+            int negativeElement = 0;
+            vector<int> resultArray(nums.size());
+            for(int i = 0; i < nums.size(); i++) {
+                if(i % 2 == 0) {
+                    while(nums[positiveElement] < 0) positiveElement++;
+                    resultArray[i] = nums[positiveElement++];
+                } else {
+                    while(nums[negativeElement] > 0) negativeElement++;
+                    resultArray[i] = nums[negativeElement++];
+                }
+            }
+            return resultArray;
         }
     };

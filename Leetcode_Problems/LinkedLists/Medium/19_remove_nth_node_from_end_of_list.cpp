@@ -12,6 +12,7 @@ struct ListNode {
 class Solution {
 public:
     ListNode* removeNthFromEnd(ListNode* head, int n) {
+        // My Bruteforce
         ListNode* temp = head;
         ListNode* resultHead = head;
         int sizeOfLL = 0;

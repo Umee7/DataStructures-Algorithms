@@ -20,7 +20,7 @@ class Solution {
 
         int notPick = 0;
         // Not pick case
-        findBeautifulSubsets(index + 1, k, temp, nums);
+        notPick = findBeautifulSubsets(index + 1, k, temp, nums);
 
         return pick + notPick;
 
